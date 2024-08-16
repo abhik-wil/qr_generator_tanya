@@ -110,8 +110,9 @@ function App() {
 				item.domain === selectedDomain &&
 				item.street.toLowerCase().includes(selectedStreet.trim().toLowerCase())
 		);
+		console.log("SELECTED PROVIDER ID", selectedData?.provider_id ?? "a")
 		return selectedData?.provider_id ?? "";
-	}, [selectedProviderName, selectedStreet, selectedBppId]);
+	}, [selectedProviderName, selectedStreet, selectedBppId, selectedDomain]);
 
 	useEffect(() => {
 		if (bppIdOptions.length == 1) {
